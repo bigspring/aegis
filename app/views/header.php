@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="path/to/favicon.png">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Welcome to The Machine</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= site_url('assets/css/base.css') ?>" rel="stylesheet">
