@@ -55,10 +55,10 @@ class Forgot extends EX_Controller {
         }
         
         $this->data['title'] = 'Forgotten Password?';
-        $this->data['description'] = 'Forgot your password to labourmarket.com?  Retrieve it here.';
+        $this->data['description'] = 'Forgot your password?  Retrieve it here.';
         $this->view = 'user/forgot/forgot';
         
-        $this->render();
+        $this->_render();
     }
 
     public function sent()
@@ -67,7 +67,7 @@ class Forgot extends EX_Controller {
         $this->data['description'] = '';
         $this->view = 'user/forgot/sent';
         
-        $this->render();
+        $this->_render();
     }
 
     public function reset($token)
@@ -104,10 +104,10 @@ class Forgot extends EX_Controller {
         
         $this->data['user'] = $user;
         $this->data['title'] = 'Reset your password';
-        $this->data['description'] = 'Reset your password with to labourmarket.com.';
+        $this->data['description'] = 'Reset your password.';
         
         
-        $this->render();
+        $this->_render();
     }
     
     public function _email_password_link($token, $email)
@@ -118,10 +118,10 @@ class Forgot extends EX_Controller {
         
         // send confirmation email
         $this->load->library('email');
-        $this->email->from('info@labourmarket.com', 'labourmarket');
+        $this->email->from('hello@bigspring.com', 'bigspring');
         $this->email->to($email);
              
-        $this->email->subject('Your password reset request for labourmarket.com');
+        $this->email->subject('Your password reset request');
         $this->email->message($message);        
                                     
         $this->email->send();        

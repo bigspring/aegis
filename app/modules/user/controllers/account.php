@@ -82,10 +82,10 @@ class Account extends Upload_Controller {
         $this->_prepare_jquery_upload();
         $this->scripts[] = 'modules::user/manage.js';
         $this->data['user'] = $user;
-        $this->data['title'] = 'My Account | labourmarket.com';
+        $this->data['title'] = 'My Account';
         $this->data['description'] = '';
         $this->view = 'manage';
-        $this->render();
+        $this->_render();
     }
 
     function upload_avatar()
