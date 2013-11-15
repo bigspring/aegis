@@ -36,8 +36,8 @@ class Verify extends EX_Controller
             $this->view = 'failed_verify';    
         }
         
-        $this->data['title'] = 'Account Verification | LabourMarket.com';
+        $this->data['title'] = 'Account Verification';
         $this->data['description'] = '';
-        $this->render();
+        $this->_render();
     }
 }

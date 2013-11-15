@@ -105,17 +105,6 @@ class EX_Controller extends CI_Controller {
 		// if the render property has been set, use it to work out the subfolder for views
 		if($this->render)
 			$type = $this->render;
-        
-        // If the user is using a mobile, use a mobile theme
-        $this->load->library('user_agent');
-        if( $this->agent->is_mobile() )
-        {
-            /*
-             * Use my template library to set a theme for your staff
-             *     http://philsturgeon.co.uk/code/codeigniter-template
-             */
-            //$this->template->set_theme('mobile');
-        }
 
 		// if we have a subfolder specified for the views, load the views
 		if($type) {
