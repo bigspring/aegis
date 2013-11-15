@@ -6,7 +6,7 @@
  * Global configuration settings that apply to all DataMapped models.
  */
 
-$config['prefix'] = '';
+$config['prefix'] = 'ae_';
 $config['join_prefix'] = '';
 $config['error_prefix'] = '<span class="error">';
 $config['error_suffix'] = '</span>';
@@ -27,7 +27,7 @@ $config['db_params'] = '';
 // Uncomment to enable the production cache
 // $config['production_cache'] = 'datamapper/cache';
 $config['extensions_path'] = 'datamapper';
-$config['extensions'] = array();
+$config['extensions'] = array('array');
 
 /* End of file datamapper.php */
 /* Location: ./application/config/datamapper.php */
