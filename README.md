@@ -17,7 +17,10 @@ installation
 
 	datamapper.php
 		$config['prefix'] = 'ae_';
-
+	
+	.htaccess
+		RewriteBase /aegis
+		
 3. Edit "users_setup.sql" script in modules/user/installation to include chosen prefix (as per above).
 4. Run "users_setup.sql" to create tables (users, user_logins, user_groups) with default creds (aegis@bigspring.co.uk:aegis13)
 
