@@ -85,7 +85,7 @@ if (!function_exists('_form_common'))
 		if($type == 'textarea') 
 		{
 			$output = '
-				<div class="control-group'.$valid_class.'">
+				<div class="form-group'.$valid_class.'">
 					<label class="control-label" for="' . $defaults['name'] . '"> ' . $label . '</label>
 					<div class="controls">
 						 <textarea ' . $output . ' ' . $extra . '>' . $value . '</textarea>
@@ -96,7 +96,7 @@ if (!function_exists('_form_common'))
 		elseif($type == 'dropdown') 
 		{			
 			$output = '
-			<div class="control-group'.$valid_class.'">
+			<div class="form-group'.$valid_class.'">
 			<label class="control-label" for="' . $defaults['name'] . '">' . $label . '</label>
 			<div class="controls">
 			<select name="' . $defaults['name'] . '" ' . $extra . '> ';
@@ -129,7 +129,7 @@ if (!function_exists('_form_common'))
 		elseif($type == 'radio')
 		{
 			$output = '
-				<div class="control-group'.$valid_class.'">
+				<div class="form-group'.$valid_class.'">
 					<label class="control-label" for="' . $defaults['name'] . '">' . $label . '</label>
 					<div class="controls">';
 
@@ -159,7 +159,7 @@ if (!function_exists('_form_common'))
         elseif($type == 'password')
         {
                 $output = '
-                <div class="control-group'.$valid_class.'">
+                <div class="form-group'.$valid_class.'">
                     <label class="control-label" for="' . $defaults['name'] . '">' . $label . '</label>
                     <div class="controls">
                          <input ' . $output . ' ' . $extra . ' />
@@ -172,7 +172,7 @@ if (!function_exists('_form_common'))
 		else 
 		{
 			$output = '
-				<div class="control-group'.$valid_class.'">
+				<div class="form-group'.$valid_class.'">
 					<label class="control-label" for="' . $defaults['name'] . '">' . $label . '</label>
 					<div class="controls">
 						 <input ' . $output . ' ' . $extra . ' />
@@ -198,7 +198,7 @@ function _form_search($output, $attributes='', $value='', $label='', $extra='', 
 function _form_horizontal($output, $attributes='', $value='', $label='', $extra='', $help = '')
 {
 	$output = '
-	<div class="control-group">
+	<div class="form-group">
 	<label class="control-label" for="">' . $label . '</label>
 	<div class="controls">
 	<input ' . $output . ' ' . $extra . ' />' .
