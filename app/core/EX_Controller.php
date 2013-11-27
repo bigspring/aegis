@@ -420,7 +420,7 @@ class EX_Controller extends CI_Controller {
         $this->data['title'] = 'View ' . $this->entity_name;
         
         $entity = new $this->model_name();
-        $this->data['main'] =  $data->get_where(array('id' => $id));
+        $this->data['main'] = $entity->get_where(array('id' => $id));
 
         $this->_render();        
     }    
