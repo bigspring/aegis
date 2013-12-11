@@ -1,7 +1,7 @@
 <? if($this->messages->count() > 0) { // if we have any notification messages, display them?>	
 	<? if($this->messages->count('error') > 0) { // if we have error messages?>
 		<? foreach($this->messages->get('error') AS $message) { ?>
-    			<div class="alert alert-error">
+    			<div class="alert alert-warning">
     				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     				<?= $message; // display ui notifications ?>			
     			</div>
