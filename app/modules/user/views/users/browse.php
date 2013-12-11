@@ -1,12 +1,12 @@
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
             <div class="page-header">
-                <div class="row-fluid">
-                    <div class="span8">
+                <div class="row">
+                    <div class="col-md-8">
                         <h1>List of Users</h1>                
                     </div>
-                    <div class="span4">
+                    <div class="col-md-4">
                         <a href="<?= site_url('user/users/add') ?>" class="btn btn-primary pull-right"><i class="icon icon-plus-sign"></i>Add a User</a>
                     </div>
                 </div>

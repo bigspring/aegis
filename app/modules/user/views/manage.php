@@ -1,15 +1,15 @@
 <div id="main">
-    <div class="container-fluid">    
+    <div class="container">    
         <div id="content">
-            <div class="row-fluid">
-                <div class="span12">
+            <div class="row">
+                <div class="col-md-12">
                     <div id="details-form">
                         <h2>Your Account</h2>
                         <div class="well">
                             <h3>Your Profile Picture</h3>
                             <?= form_open_multipart('', array('class'=>'form fileupload')); ?>
                                     <div class="row fileupload-buttonbar">
-                                        <div class="span3">
+                                        <div class="col-md-3">
                                             <div class="files">
                                                 <? if($user->avatar == '') { ?>
                                                     <div class="template-download in">
