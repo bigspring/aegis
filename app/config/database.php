@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-$db['default']['database'] = 'aegis';
+$db['default']['hostname'] = 'dev.bigspring.co.uk';
+$db['default']['username'] = 'hiwatt';
+$db['default']['password'] = 'Phe6U98Buw';
+$db['default']['database'] = 'dev_aegis';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
