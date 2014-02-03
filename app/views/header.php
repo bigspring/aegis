@@ -10,9 +10,9 @@
 
     <title>Welcome to The Machine</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?= site_url('assets/css/base.css') ?>" rel="stylesheet">
-    
+	<!-- Latest compiled and minified CSS from CDN -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
     <!-- Modernizer -->
     <link href="<?= site_url('assets/js/library/modernizer.min.js') ?>" rel="stylesheet">
 
