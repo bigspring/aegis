@@ -17,6 +17,6 @@
 	      </ul>
 	    </div><!--/.nav-collapse -->
 	  </div>
-	</nav>
-	
+	</nav>	
+	<?php $this->load->view('notifications') // display the notitification partial ?>
 	<div class="container">
