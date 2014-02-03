@@ -1,6 +1,6 @@
-<div class="container-fluid">
-	<div id="main" class="row-fluid">
-		<div id="content" class="span12">
+<div class="container">
+	<div id="main" class="row">
+		<div id="content" class="col-md-12">
 		    Homepage
 		</div>
 	</div>

@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 <div class="container">
 <div class="row">
-<div class="span12">
+<div class="col-md-12">
 <div class="jc-demo-box">
 
 <div class="page-header">
