@@ -1,4 +1,4 @@
-<?= form_open('', array('class' => 'form form-horizontal')); ?>
+<?= form_open('', array('class' => 'form form-horizontal')); ?>1
 <?= form_input('email', $main->email, 'Email', 'class="form-control required email"', $main->error->email) ?>
 <?= form_input('firstname', $main->firstname, 'First Name', 'class="form-control required"', $main->error->firstname) ?>
 <?= form_input('lastname', $main->lastname, 'Last Name', 'class="form-control required"', $main->error->lastname) ?>

@@ -1,5 +1,7 @@
-<h1>List of Users</h1>                
-<a href="<?= site_url('user/users/add') ?>" class="btn btn-primary pull-right"><i class="icon icon-plus-sign"></i>Add a User</a>
+<div class="page-header">
+	<h1>List of Users</h1>                
+	<a href="<?= site_url('user/users/add') ?>" class="btn btn-primary">Create User</a>
+</div>
 <table class="table">
     <thead>
         <th>Name</th>
