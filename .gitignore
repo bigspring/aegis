@@ -4,3 +4,21 @@
 *.prefs
 
 app/config/database.php
+
+.idea/deployment.xml
+
+.idea/.name
+
+.idea/encodings.xml
+
+.idea/aegis.iml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/scopes/scope_settings.xml
+
+.idea/vcs.xml
+
+.idea/workspace.xml
