@@ -94,7 +94,7 @@ $extensions = array("ttf", "afm", "afm.php", "ufm", "ufm.php");
               }
               else {
                 ob_start();
-                $d = include("$path.$ext");
+                $d = include("fonts.php");
                 ob_end_clean();
                 
                 if ($d == 1)

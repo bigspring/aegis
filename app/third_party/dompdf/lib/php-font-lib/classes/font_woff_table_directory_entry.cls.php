@@ -2,12 +2,12 @@
 /**
  * @package php-font-lib
  * @link    http://php-font-lib.googlecode.com/
- * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @author  Fabien Mï¿½nager <fabien.menager@gmail.com>
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @version $Id: font_woff_table_directory_entry.cls.php 39 2012-01-15 12:25:22Z fabien.menager $
  */
 
-require_once dirname(__FILE__)."/font_table_directory_entry.cls.php";
+require_once dirname(__FILE__) . "/font_table_directory_entry.cls.php";
 
 /**
  * WOFF font file table directory entry.
