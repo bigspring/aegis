@@ -11,7 +11,7 @@
 <hr />
 <!-- form buttons -->
 <div class="form-group form-buttons">
-    <?= form_button(array('name' => 'submit', 'type' => 'submit', 'class' => 'btn btn-success', 'value' =>'Save'), 'Save') ?>
+    <?= form_button(array('name' => 'submit', 'type' => 'submit', 'class' => 'btn btn-success', 'value' =>'Save'), get_submit_text('User')) ?>
     <a href="<?= site_url('user/users/browse') ?>" class="btn btn-link">Cancel</a>
 </div>
 <?= form_close() ?>
