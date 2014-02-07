@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class EX_Controller extends CI_Controller {
+class EX_Controller extends MX_Controller {
 
 	/*
 	 * Main data array passed to views
