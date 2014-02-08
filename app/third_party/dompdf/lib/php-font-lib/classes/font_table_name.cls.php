@@ -2,12 +2,12 @@
 /**
  * @package php-font-lib
  * @link    http://php-font-lib.googlecode.com/
- * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @author  Fabien Mï¿½nager <fabien.menager@gmail.com>
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @version $Id: font_table_name.cls.php 36 2011-11-03 23:02:06Z fabien.menager $
  */
 
-require_once dirname(__FILE__)."/font_table_name_record.cls.php";
+require_once dirname(__FILE__) . "/font_table_name_record.cls.php";
 
 /**
  * `name` font table.

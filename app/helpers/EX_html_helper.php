@@ -239,12 +239,13 @@
     }
 
     /**
-     * Renders the body classes as a string
+     * Renders the body classes as a
+     * @TODO Needs fixing as doesn't have scope over $this->body_classes
      */
     function body_classes()
     {
         $CI =& get_instance();
-        
+
         if(!$CI->body_classes) return false;
         return implode(" ", $CI->body_classes);
     }

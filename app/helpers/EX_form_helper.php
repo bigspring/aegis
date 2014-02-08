@@ -446,3 +446,28 @@ function getCountryList()
         
     return $countrylist;
 }
+
+/**
+ * @param null $entity Name of the entity being described
+ * @param null $text Override that returns specific text
+ * @return null|string Text to display
+ */
+function get_submit_text($entity = null, $text = null) {
+    $CI =& get_instance();
+
+    if($text)
+           return $text;
+
+    $method = $CI->router->fetch_method();
+
+    if($method == 'add') {
+
+        $verb = (isset($verb)) ? $verb : 'Create';
+
+        $text = ($entity) ? $verb . ' ' . $entity : $verb;
+        return $text;
+
+    } elseif ($method == 'edit') {
+        return 'Save';
+    }
+}
