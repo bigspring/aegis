@@ -54,9 +54,7 @@ class EX_Controller extends MX_Controller {
 		// load libraries
 		log_message('debug', 'Application Loaded');
         $this->load->spark('messages/1.0.3');
-        $this->config->load('ag_auth');
-		$this->load->library(array('form_validation', 'ag_auth'));
-        $this->load->helper(array('html', 'url', 'ag_auth'));
+        $this->load->helper(array('html', 'url'));
 
 		// initialise vars
 		$this->data['entity'] = null;
@@ -66,7 +64,7 @@ class EX_Controller extends MX_Controller {
 		$this->nav = $this->_getNav();
 						
 		// set the referring page
-		$this->load->library('form_validation');
+        $this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<span class="error">', '</span>');
 	}
 	
@@ -198,7 +196,7 @@ class EX_Controller extends MX_Controller {
     }
     
     /**
-     * Handles editing an entiry
+     * Handles editing an entity
      */
     public function edit($id, $data = false)
     {
@@ -212,7 +210,7 @@ class EX_Controller extends MX_Controller {
         // if we haven't been passed data but post data exists, set $data = post
         if($data == false && $this->input->post())
             $data = $this->input->post();
-        
+
         // if we have post data
         if($data)
         { 
@@ -351,7 +349,7 @@ class EX_Controller extends MX_Controller {
         $this->data['h1title'] = 'Delete ' . $this->entity_name . ' - ' . $entity->name;
         $this->data['title'] = 'Delete ' . $this->entity_name . ' - ' . $entity->name;
         $this->data['main'] = $entity;
-        
+
         $this->_render();
     }
     

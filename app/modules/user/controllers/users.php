@@ -9,6 +9,7 @@ class Users extends EX_Controller
 		$this->model_name = 'user';
 		$this->entity_name = 'User';
 		$this->data['entity'] = 'Users';
+        $this->load->library('user/ag_auth');
 		$this->ag_auth->restrict('admin'); // restrict this controller to admins only
 	}
 	
