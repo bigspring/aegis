@@ -1,5 +1,4 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-
 class Upload_Controller extends EX_Controller {
 
     public function __construct() 

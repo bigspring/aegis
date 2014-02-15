@@ -1,9 +1,9 @@
-<?php
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Requires:
  * AG Auth - 
  */
-class Restricted_Controller extends EX_Controller
+class Restricted_Controller extends Template_Controller
 {
     function __construct()
     {

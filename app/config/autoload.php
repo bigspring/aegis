@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database', 'datamapper');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('debug');
+$autoload['helper'] = array('debug','url', 'form', 'date');
 
 
 /*
