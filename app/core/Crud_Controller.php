@@ -11,11 +11,6 @@ class Crud_Controller extends Restricted_Controller {
      */
     protected $model_name = null;
 
-    /**
-     * Default where clause for all normal get methods
-     */
-    protected $model_relations = null;
-
     public $autoload = array('helper' => array('form', 'date'));
 
     public function __construct()
@@ -315,45 +310,6 @@ class Crud_Controller extends Restricted_Controller {
 
         // get all entities
         $data = new $this->model_name();
-
-        // base
-        if($this->model_relations)
-        {
-            // if we've been provided a related key in the array, use a related query
-            if(array_key_exists('related_where', $this->model_relations))
-            {
-                if(is_array($this->model_relations['related_where']))
-                { // if we've been provided with an array, there must be several relationships so process each one
-                    foreach($this->model_relations['related_where'] AS $related)
-                    {
-                        if(array_key_exists('model', $related)) // if we've been provided a model, must be a relational where
-                            $data = $data->where_related($related['model'], $related['field'], $related['value']);
-                        else // otherwise a number where
-                            $data = $data->where($related['field'], $related['value']);
-                    }
-                }
-                else
-                {
-                    $related = $this->model_relations['related_where'];
-                    $data = $data->where_related($related['model'], $related['field'], $related['value']);
-                }
-            }
-            else
-            {
-                $data = $data->where($this->model_relations);
-            }
-
-            if(array_key_exists('related_order', $this->model_relations))
-            {
-                $related = $this->model_relations['related_order'];
-                $data = $data->order_by_related($related['model'], $related['ordering']);
-            }
-
-            if(array_key_exists('group_by', $this->model_relations))
-            {
-                $data = $data->group_by($this->model_relations['group_by']);
-            }
-        }
         $this->data['main'] =  $data->get();
 
         $this->_render();
