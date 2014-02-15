@@ -7,6 +7,7 @@ class Examples extends Crud_Controller {
         $this->model_name = 'example';
         $this->entity_name = 'Example';
         $this->load->model('user/user');
-        parent::_construct();
+        $this->load->helper('form');
+        parent::__construct();
     }
 }

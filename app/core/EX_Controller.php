@@ -1,93 +1,18 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class EX_Controller extends MX_Controller {
 
-	/*
-	 * Main data array passed to views
-	 */
-	public $data;
-
-	/*
-	 * Main content view to render
-	*/	
-	public $view = null;
-	/*
-	 * Navigation structure for output to TWBS
-	 */
-	public $nav = null;
-    
     /*
      * A custom redirect string
      */
 	public $redirect = false;
 	
-	/**
-	 * Array of JS scripts to call
-	 */
-	public $scripts = false;
-    
-    /**
-     * Array of css stylesheets to call
-     */
-    public $styles = false;
-    
-    /**
-     * Array of JS scripts to call
-     */
-    public $body_classes = false;
-	
-	function __construct()
+	public function __construct()
 	{
 		parent::__construct();
 
 		// load libraries
-		log_message('debug', 'Application Loaded');
+		log_message('debug', 'Core Controller Loaded');
         $this->load->spark('messages/1.0.3');
-        $this->load->helper(array('html'));
-
-		// initialise vars
-		$this->data['entity'] = null;
-		$this->data['id'] = null;
-		$this->data['title'] = null;
-		$this->data['description'] = null;
-		$this->nav = $this->_getNav();
-						
-		// set the referring page
-        $this->load->library('form_validation');
-		$this->form_validation->set_error_delimiters('<span class="error">', '</span>');
-	}
-	
-	/**
-	 * Renders the output views for the controller 
-	 * @param string $type
-	 */
-	public function _render($type = null)
-	{
-		// if we don't have a view, assume the convention (browse / view / add / edit / delete)
-		if(!$this->view)
-			$this->view = $this->router->fetch_module() . '/' . $this->router->class . '/' . $this->router->method;
-
-		// if we don't have a title, assume the convention (browse entity)
-		if(!$this->data['title'])
-		{
-			$this->load->helper('inflector');
-			$this->data['title'] = humanize($this->router->method . ' ' . $this->router->class);
-		}
-
-		// load any specific methods related to this project
-		$this->_get_app_specifics();
-		
-		// assign data to the view layer
-		$this->load->vars($this->data);
-
-        // load the views
-        $this->load->view('header');
-
-
-        $this->load->view('subhead');
-
-        if($this->view)
-            $this->load->view($this->view);
-        $this->load->view('footer');
 	}
 		
 	/**

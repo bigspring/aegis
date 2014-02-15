@@ -16,10 +16,10 @@ class Crud_Controller extends Restricted_Controller {
      */
     protected $model_relations = null;
 
-    public $autoload = array('helper' => 'form');
+    public $autoload = array('helper' => array('form', 'date'));
 
-    function __construct() {
-
+    public function __construct()
+    {
         // initialise vars
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<span class="error">', '</span>');

@@ -126,43 +126,6 @@
             return $user->avatar; 
         }
     }
-        
-    function render_scripts()
-    {
-    	$html = array();
-        $CI =& get_instance();
-        
-        if(!$CI->scripts)
-            return false;
-    	
-        foreach($CI->scripts AS $script)
-        {
-            if(strpos($script, 'module::') !== false)
-            {
-                $html[] = '<script type="text/javascript" src="' . site_url(APPPATH . 'modules/' . '/js/ ' . $script) . '"></script>';
-            } else {
-                $html[] = '<script type="text/javascript" src="' . site_url('assets/js/' . $script) . '"></script>';    
-            }
-        }        		
-    	
-    	return $html ? implode("\n", $html) : false;
-    }
-    
-    function render_styles()
-    {
-        $html = array();
-        $CI =& get_instance();
-        
-        if(!$CI->styles)
-            return false;
-        
-        foreach($CI->styles AS $style)
-        {
-            $html[] = '<link href="'. site_url('assets/' . $style) .'" rel="stylesheet" type="text/css">';    
-        }   
-        
-        return $html ? implode("\n", $html) : false;
-    }
     
     /**
      * https://github.com/porquero/multifile-array-ci-helper
