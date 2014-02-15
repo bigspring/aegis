@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="path/to/favicon.png">
 
-    <title>Welcome to The Machine</title>
+    <title><?= $page_title; ?></title>
+    <meta name="description" content="<?= $page_description; ?>">
 
 	<!-- Latest compiled and minified CSS from CDN -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">

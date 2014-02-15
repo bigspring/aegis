@@ -1,3 +1,4 @@
+<h1>Browse Examples</h1>
 <a href="<?= site_url('example_crud/examples/add'); ?>" class="btn btn-primary pull-right">Add Example</a>
 <table class="table">
     <thead>

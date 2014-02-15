@@ -16,21 +16,6 @@ class Template_Controller extends EX_Controller {
 	 */
 	private $nav = null;
 
-    /**
-     * Array of JS scripts to call
-     */
-	public $scripts = false;
-
-    /**
-     * Array of css stylesheets to call
-     */
-    public $styles = false;
-
-    /**
-     * Array of body classes to be added
-     */
-    public $body_classes = false;
-
     public function __construct() {
         $this->load->spark('messages/1.0.3');
         $this->load->helper('url');
@@ -39,16 +24,27 @@ class Template_Controller extends EX_Controller {
         $this->data = array(
             'id' => null,
             'entity' => null,
-            'title' => null,
-            'description' => null,
+            'page_title' => null,
+            'page_description' => null,
+            'h1title' => null,
             'scripts' => null,
             'styles' => null,
-            'main' => null
+            'main' => null,
+            'body_classes' => null
         );
 
+        $this->_setup_data();
         $this->nav = $this->_getNav(); // load the navigation
 
         parent::__construct();
+    }
+
+    public function _setup_data() {
+        $this->config->load('template');
+
+        $this->data['page_title'] = $this->config->item('site_name');
+        $this->data['page_description'] = $this->config->item('site_description');
+        return true;
     }
 
     /**
@@ -60,13 +56,6 @@ class Template_Controller extends EX_Controller {
         // if we don't have a view, assume the convention (browse / view / add / edit / delete)
         if(!$this->view)
             $this->view = $this->router->fetch_module() . '/' . $this->router->class . '/' . $this->router->method;
-
-        // if we don't have a title, assume the convention (browse entity)
-        if(!$this->data['title'])
-        {
-            $this->load->helper('inflector');
-            $this->data['title'] = humanize($this->router->method . ' ' . $this->router->class);
-        }
 
         // load any specific methods related to this project
         $this->_get_app_specifics();
