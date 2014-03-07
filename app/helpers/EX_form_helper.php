@@ -38,7 +38,8 @@ A string with the formatted input element, label tag and wrapping divs.
 if (!function_exists('_form_common'))
 {
 	function _form_common($type='text', $data='', $value='', $label='', $extra='', $validation = '', $tooltip = '', $default_option = null)
-	{		
+	{
+
 		$valid_class = '';
 		
 		// add the bootstrap markup to inline help		
@@ -170,7 +171,7 @@ if (!function_exists('_form_common'))
 						' . $validation . ' ' . $tooltip . '
 				</div>';
 		}
-		
+
 		return $output;
 	}
 }

@@ -10,6 +10,7 @@ class Users extends Crud_Controller
 		$this->entity_name = 'User';
 		$this->data['entity'] = 'Users';
         $this->load->library('user/ag_auth');
+		$this->load->helper('html');
 		$this->ag_auth->restrict('admin'); // restrict this controller to admins only
 	}
 	
@@ -19,7 +20,7 @@ class Users extends Crud_Controller
 	public function add()
 	{
 		// get the user groups
-		$user_group = new user_group();		
+		$user_group = new user_group();
 		$this->data['groups'] = $user_group->get()->all_to_single_array('title');
 		
 		parent::add();
