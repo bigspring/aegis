@@ -193,3 +193,29 @@
         if(!$CI->body_classes) return false;
         return implode(" ", $CI->body_classes);
     }
+
+	/**
+	 * Accepts a date and returns a UK format date, optional time parmaeter
+	 * @param string $date the date to be displayed
+	 * @param bool $time if not false, a time will be displayed too
+	 * @return string $datestr
+	 */
+	function format_date($date, $time = false)
+	{
+		$datestr = '';
+
+		if($time != false) {
+			$datestring = 'd/m/Y H:i';
+		} else {
+			$datestring = 'd/m/Y';
+		}
+
+		if($date != null && $date != '0000-00-00 00:00:00' && $date != '0000-00-00') {
+			$datestr = date_format(date_create($date), $datestring);
+		} else {
+
+			$datestr = date($datestring);
+		}
+
+		return $datestr;
+	}
