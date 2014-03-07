@@ -22,7 +22,7 @@ class Users extends Crud_Controller
 		// get the user groups
 		$user_group = new user_group();
 		$this->data['groups'] = $user_group->get()->all_to_single_array('title');
-		
+
 		parent::add();
 	}
 	
