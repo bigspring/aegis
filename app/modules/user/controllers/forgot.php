@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Forgot extends EX_Controller {
+class Forgot extends Public_Controller {
     
     public function __construct()
     {   

@@ -33,26 +33,7 @@
     	return $flag == 1 ? 'Yes' : 'No';
     }
 
-    /**
-    * Accepts a date and returns a UK format date, optional time parmaeter
-    * @param string $date the date to be displayed
-    * @param string $time if not false, a time will be displayed too
-    * @return string $datestr
-    */    
-    function format_date($date, $time = false)
-    {
-        $datestr = '';
-        
-        if($time != false)
-            $datestring = 'd/m/Y H:i';
-        else
-            $datestring = 'd/m/Y';
-        
-        if($date != null && $date != '0000-00-00 00:00:00' && $date != '0000-00-00')
-            $datestr = date_format(date_create($date), $datestring);
-        
-        return $datestr;
-    }
+
     
     /**
      * Generates the src element for an image tag
@@ -145,43 +126,6 @@
             return $user->avatar; 
         }
     }
-        
-    function render_scripts()
-    {
-    	$html = array();
-        $CI =& get_instance();
-        
-        if(!$CI->scripts)
-            return false;
-    	
-        foreach($CI->scripts AS $script)
-        {
-            if(strpos($script, 'module::') !== false)
-            {
-                $html[] = '<script type="text/javascript" src="' . site_url(APPPATH . 'modules/' . '/js/ ' . $script) . '"></script>';
-            } else {
-                $html[] = '<script type="text/javascript" src="' . site_url('assets/js/' . $script) . '"></script>';    
-            }
-        }        		
-    	
-    	return $html ? implode("\n", $html) : false;
-    }
-    
-    function render_styles()
-    {
-        $html = array();
-        $CI =& get_instance();
-        
-        if(!$CI->styles)
-            return false;
-        
-        foreach($CI->styles AS $style)
-        {
-            $html[] = '<link href="'. site_url('assets/' . $style) .'" rel="stylesheet" type="text/css">';    
-        }   
-        
-        return $html ? implode("\n", $html) : false;
-    }
     
     /**
      * https://github.com/porquero/multifile-array-ci-helper
@@ -239,12 +183,39 @@
     }
 
     /**
-     * Renders the body classes as a string
+     * Renders the body classes as a
+     * @TODO Needs fixing as doesn't have scope over $this->body_classes
      */
     function body_classes()
     {
         $CI =& get_instance();
-        
+
         if(!$CI->body_classes) return false;
         return implode(" ", $CI->body_classes);
     }
+
+	/**
+	 * Accepts a date and returns a UK format date, optional time parmaeter
+	 * @param string $date the date to be displayed
+	 * @param bool $time if not false, a time will be displayed too
+	 * @return string $datestr
+	 */
+	function format_date($date, $time = false)
+	{
+		$datestr = '';
+
+		if($time != false) {
+			$datestring = 'd/m/Y H:i';
+		} else {
+			$datestring = 'd/m/Y';
+		}
+
+		if($date != null && $date != '0000-00-00 00:00:00' && $date != '0000-00-00') {
+			$datestr = date_format(date_create($date), $datestring);
+		} else {
+
+			$datestr = date($datestring);
+		}
+
+		return $datestr;
+	}

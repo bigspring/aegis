@@ -4,3 +4,5 @@
 *.prefs
 
 app/config/database.php
+
+.idea/

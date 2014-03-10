@@ -38,7 +38,8 @@ A string with the formatted input element, label tag and wrapping divs.
 if (!function_exists('_form_common'))
 {
 	function _form_common($type='text', $data='', $value='', $label='', $extra='', $validation = '', $tooltip = '', $default_option = null)
-	{		
+	{
+
 		$valid_class = '';
 		
 		// add the bootstrap markup to inline help		
@@ -170,7 +171,7 @@ if (!function_exists('_form_common'))
 						' . $validation . ' ' . $tooltip . '
 				</div>';
 		}
-		
+
 		return $output;
 	}
 }
@@ -445,4 +446,29 @@ function getCountryList()
                                         "Argentina" => "Argentina" ,"Armenia" => "Armenia" ,"Australia" => "Australia" ,"Austria" => "Austria" ,"Azerbaijan" => "Azerbaijan" ,"Bahamas" => "Bahamas" ,"Bahrain" => "Bahrain" ,"Bangladesh" => "Bangladesh" ,"Barbados" => "Barbados" ,"Belarus" => "Belarus" ,"Belgium" => "Belgium" ,"Belize" => "Belize" ,"Benin" => "Benin" ,"Bhutan" => "Bhutan" ,"Bolivia" => "Bolivia" ,"Bosnia and Herzegovina" => "Bosnia and Herzegovina" ,"Botswana" => "Botswana" ,"Brazil" => "Brazil" ,"Brunei" => "Brunei" ,"Bulgaria" => "Bulgaria" ,"Burkina Faso" => "Burkina Faso" ,"Burundi" => "Burundi" ,"Cambodia" => "Cambodia" ,"Cameroon" => "Cameroon" ,"Canada" => "Canada","Cape Verde" => "Cape Verde" ,"Central African Republic" => "Central African Republic" ,"Chad" => "Chad" ,"Chile" => "Chile" ,"China" => "China" ,"Colombi" => "Colombi" ,"Comoros" => "Comoros" ,"Congo (Brazzaville)" => "Congo (Brazzaville)" ,"Congo" => "Congo" ,"Costa Rica" => "Costa Rica" ,"Cote d'Ivoire" => "Cote d'Ivoire" ,"Croatia" => "Croatia" ,"Cuba" => "Cuba" ,"Cyprus" => "Cyprus" ,"Czech Republic" => "Czech Republic" ,"Denmark" => "Denmark" ,"Djibouti" => "Djibouti" ,"Dominica" => "Dominica" ,"Dominican Republic" => "Dominican Republic" ,"East Timor (Timor Timur)" => "East Timor (Timor Timur)" ,"Ecuador" => "Ecuador" ,"Egypt" => "Egypt" ,"El Salvador" => "El Salvador" ,"Equatorial Guinea" => "Equatorial Guinea" ,"Eritrea" => "Eritrea" ,"Estonia" => "Estonia" ,"Ethiopia" => "Ethiopia" ,"Fiji" => "Fiji" ,"Finland" => "Finland" ,"Gabon" => "Gabon" ,"Gambia, The" => "Gambia, The" ,"Georgia" => "Georgia" ,"Ghana" => "Ghana" ,"Greece" => "Greece" ,"Grenada" => "Grenada" ,"Guatemala" => "Guatemala" ,"Guinea" => "Guinea" ,"Guinea-Bissau" => "Guinea-Bissau" ,"Guyana" => "Guyana" ,"Haiti" => "Haiti" ,"Honduras" => "Honduras" ,"Hungary" => "Hungary" ,"Iceland" => "Iceland" ,"India" => "India" ,"Indonesia" => "Indonesia" ,"Iran" => "Iran" ,"Iraq" => "Iraq" ,"Ireland" => "Ireland" ,"Israel" => "Israel" ,"Jamaica" => "Jamaica" ,"Japan" => "Japan" ,"Jordan" => "Jordan" ,"Kazakhstan" => "Kazakhstan" ,"Kenya" => "Kenya" ,"Kiribati" => "Kiribati" ,"Korea, North" => "Korea, North" ,"Korea, South" => "Korea, South" ,"Kuwait" => "Kuwait" ,"Kyrgyzstan" => "Kyrgyzstan" ,"Laos" => "Laos" ,"Latvia" => "Latvia" ,"Lebanon" => "Lebanon" ,"Lesotho" => "Lesotho" ,"Liberia" => "Liberia" ,"Libya" => "Libya" ,"Liechtenstein" => "Liechtenstein" ,"Lithuania" => "Lithuania" ,"Luxembourg" => "Luxembourg" ,"Macedonia" => "Macedonia" ,"Madagascar" => "Madagascar" ,"Malawi" => "Malawi" ,"Malaysia" => "Malaysia" ,"Maldives" => "Maldives" ,"Mali" => "Mali" ,"Malta" => "Malta" ,"Marshall Islands" => "Marshall Islands" ,"Mauritania" => "Mauritania" ,"Mauritius" => "Mauritius" ,"Mexico" => "Mexico" ,"Micronesia" => "Micronesia" ,"Moldova" => "Moldova" ,"Monaco" => "Monaco" ,"Mongolia" => "Mongolia" ,"Morocco" => "Morocco" ,"Mozambique" => "Mozambique" ,"Myanmar" => "Myanmar" ,"Namibia" => "Namibia" ,"Nauru" => "Nauru" ,"Nepa" => "Nepa" ,"Netherlands" => "Netherlands" ,"New Zealand" => "New Zealand" ,"Nicaragua" => "Nicaragua" ,"Niger" => "Niger" ,"Nigeria" => "Nigeria" ,"Norway" => "Norway" ,"Oman" => "Oman" ,"Pakistan" => "Pakistan" ,"Palau" => "Palau" ,"Panama" => "Panama" ,"Papua New Guinea" => "Papua New Guinea" ,"Paraguay" => "Paraguay" ,"Peru" => "Peru" ,"Philippines" => "Philippines" ,"Poland" => "Poland" ,"Portugal" => "Portugal" ,"Qatar" => "Qatar" ,"Romania" => "Romania" ,"Rwanda" => "Rwanda" ,"Saint Kitts and Nevis" => "Saint Kitts and Nevis" ,"Saint Lucia" => "Saint Lucia" ,"Saint Vincent" => "Saint Vincent" ,"Samoa" => "Samoa" ,"San Marino" => "San Marino" ,"Sao Tome and Principe" => "Sao Tome and Principe" ,"Saudi Arabia" => "Saudi Arabia" ,"Senegal" => "Senegal" ,"Serbia and Montenegro" => "Serbia and Montenegro" ,"Seychelles" => "Seychelles" ,"Sierra Leone" => "Sierra Leone" ,"Singapore" => "Singapore" ,"Slovakia" => "Slovakia" ,"Slovenia" => "Slovenia" ,"Solomon Islands" => "Solomon Islands" ,"Somalia" => "Somalia" ,"South Africa" => "South Africa" ,"Sri Lanka" => "Sri Lanka" ,"Sudan" => "Sudan" ,"Suriname" => "Suriname" ,"Swaziland" => "Swaziland" ,"Sweden" => "Sweden" ,"Switzerland" => "Switzerland" ,"Syria" => "Syria" ,"Taiwan" => "Taiwan" ,"Tajikistan" => "Tajikistan" ,"Tanzania" => "Tanzania" ,"Thailand" => "Thailand" ,"Togo" => "Togo" ,"Tonga" => "Tonga" ,"Trinidad and Tobago" => "Trinidad and Tobago" ,"Tunisia" => "Tunisia" ,"Turkey" => "Turkey" ,"Turkmenistan" => "Turkmenistan" ,"Tuvalu" => "Tuvalu" ,"Uganda" => "Uganda" ,"Ukraine" => "Ukraine" ,"United Arab Emirates" => "United Arab Emirates" ,"Uruguay" => "Uruguay" ,"Uzbekistan" => "Uzbekistan" ,"Vanuatu" => "Vanuatu" ,"Vatican City" => "Vatican City" ,"Venezuela" => "Venezuela" ,"Vietnam" => "Vietnam" ,"Yemen" => "Yemen" ,"Zambia" => "Zambia" ,"Zimbabwe" => "Zimbabwe" );
         
     return $countrylist;
+}
+
+/**
+ * @param null $entity Name of the entity being described
+ * @param null $text Override that returns specific text
+ * @return null|string Text to display
+ */
+function get_submit_text($entity = null, $text = null) {
+    $CI =& get_instance();
+
+    if($text)
+           return $text;
+
+    $method = $CI->router->fetch_method();
+
+    if($method == 'add') {
+
+        $verb = (isset($verb)) ? $verb : 'Create';
+
+        $text = ($entity) ? $verb . ' ' . $entity : $verb;
+        return $text;
+
+    } elseif ($method == 'edit') {
+        return 'Save';
+    }
 }

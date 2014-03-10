@@ -1,4 +1,4 @@
-<body>
+<body class="<?= $body_classes; ?>">
 	<nav class="navbar navbar-inverse" role="navigation">
 	  <div class="container">
 	    <div class="navbar-header">

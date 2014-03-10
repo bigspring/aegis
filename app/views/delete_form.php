@@ -1,0 +1,1 @@
+<h1>Delete <?= $main->name?>?</h1><?= form_open(''); ?><?= form_submit(array('name' => 'submit', 'id' => 'submit', 'class' => 'btn'), 'Yes') ?>&nbsp;<a href="<?= site_url($redirect) ?>" class="btn btn-warn">No</a><?= form_close(); ?>

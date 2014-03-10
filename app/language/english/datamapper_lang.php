@@ -21,5 +21,13 @@ $lang['dm_save_rel_failed']	= 'The %s relationship is not properly defined.';
 $lang['dm_save_rel_nothis']	= 'Unable to save the %s relationship: This object is not saved.';
 $lang['dm_save_rel_noobj']	= 'Unable to save the %s relationship: The related object was not saved.';
 
+// custom language
+$lang['required']			= 'The %s field is required';
+$lang['min_length']			= 'The %s field must be greater than %s';
+$lang['max_length']			= 'The %s field must be less than %s';
+$lang['matches']			= 'The %s must match %s';
+$lang['less_than']			= 'The %s must be less than %s';
+
+
 /* End of file datamapper_lang.php */
 /* Location: ./application/language/english/datamapper_lang.php */
