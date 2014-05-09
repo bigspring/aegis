@@ -1,0 +1,51 @@
+{% extends 'crud.html.twig' %}
+
+{% block content %}
+
+	<!-- main column -->
+	<div class="col-sm-8">
+		<div class="panel panel-default">
+
+			{% include 'crud/title.html.twig' %}
+
+			<!-- panel body -->
+			<div class="panel-body">
+				<table class="table browse-table">
+					<thead>
+						<th class="col-sm-5">Name</th>
+						<th>Email</th>
+						<th>Group</th>
+						<th class="text-right">Last Login</th>
+						</thead>
+					<tbody>
+
+					{% for user in main %}
+
+						<tr class="browse-row">
+							<td>
+								<div class="item-name">
+									<a href="{{ crud_url }}view/{{ user.id }}"><strong>{{ user.name }}</strong></a>
+								</div>
+								<div class="row-actions">
+									<small><a href="{{ crud_url }}view/{{ user.id }}">View</a> | <a class="edit-link" href="{{ crud_url }}edit/{{ user.id }}">Edit</a> | <a class="trash-link text-danger" href="{{ crud_url }}delete/{{ user.id }}" data-toggle="modal" data-target=".delete-modal">Delete</a></small>
+								</div>
+							</td>
+							<td>{{ user.email }}</td>
+							<td>{{ user.group }}</td>
+							<td class="text-right">
+								<div class="text-muted"><small>{{ user.last_login }}</small></div>
+							</td>
+						</tr>
+
+					{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+
+		</div><!-- /.panel -->
+	</div><!-- /.col-sm-8 -->
+
+	{% include 'crud/delete-modal.html.twig' %}
+
+{% endblock %}

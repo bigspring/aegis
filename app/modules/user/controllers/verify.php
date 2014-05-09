@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Verify extends Public_Controller
+class Verify extends EX_Controller
 {
     public function __construct()
     {

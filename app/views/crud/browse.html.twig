@@ -1,0 +1,53 @@
+{% extends 'crud.html.twig' %}
+
+{% import 'form_macros.html.twig' as forms %} {# required for deletion #}
+
+{% block content %}
+
+    <!-- main column -->
+    <div class="col-sm-8">
+        <div class="panel panel-default">
+
+            {% include 'crud/title.html.twig' %}
+
+            <!-- panel body -->
+            <div class="panel-body">
+                <table class="table browse-table">
+                    <thead>
+						<th>ID</th>
+						
+						<th class="col-sm-6">Name</th>						
+						<th class="text-right">Last Edit</th>
+                    </thead>
+                    <tbody>
+                        {% for item in main %}
+                            <tr class="browse-row">
+                                <td class="text-muted">{{ item.id }}</td>
+                                <td>
+	                                <div class="item-name">
+	                                	<a href="{{ crud_url }}view/{{ item.id }}"><strong>{{ item.name }}</strong></a>
+	                                </div>
+	                                <div class="row-actions">
+		                                <small><a href="{{ crud_url }}view/{{ item.id }}">View</a> | <a class="edit-link" href="{{ crud_url }}edit/{{ item.id }}">Edit</a> | <a class="trash-link text-danger" href="{{ crud_url }}delete/{{ item.id }}" data-toggle="modal" data-target=".delete-modal">Delete</a></small>
+		                            </div>
+                                </td>
+								<td class="text-right">
+									<div class="status-label"><span class="label label-success">Published</span></div>
+									<div class="text-muted"><small>Last edit: {{ item.modified|date("d/m/Y") }} by {{ get_user(item.modifiedby) }}</small></div>
+									
+                                	{# <span class="label label-info">Draft</span> #}
+                                	{# <span class="label label-danger">Trashed</span>#}	
+
+								</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div><!-- /.panel -->
+    </div><!-- /.col-sm-8 -->
+
+	{% include 'crud/delete-modal.html.twig' %}
+
+{% endblock %}
