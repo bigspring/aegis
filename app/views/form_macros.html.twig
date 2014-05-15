@@ -1,0 +1,42 @@
+{% macro start(class) %}
+    {{ form_open('', class) }}
+{% endmacro %}
+
+{% macro attribute_handler(key, field) %}
+
+    {% if field.type == 'input' %}
+        {{ form_input(key, field.value, field.label, field.extra, field.validation) }}
+
+    {% elseif field.type == 'password' %}
+        {{ form_password(key, field.value, field.label, field.extra, field.validation) }}
+
+	{% elseif field.type == 'hidden' %}
+		{{ form_hidden(key, field.value) }}
+
+	{% elseif field.type == 'dropdown' %}
+        {{ form_dropdown(key, field.data, field.value, field.label, field.extra, field.validation, '', true) }}
+
+	{% elseif field.type == 'textarea' %}
+        {{ form_textarea(key, field.value, field.label, field.extra, field.validation) }}
+
+	{% elseif field.type == 'radio' %}
+        {{ form_radio(key, field.data, field.value, field.label, field.extra, field.validation) }}
+
+	{% elseif field.type == 'checkbox' %}
+        <div class="form-group">
+			<label class="control-label">{{ field.label }}</label><br />
+			{% for k, v in field.data %}
+				<input type="checkbox" name="{{ key }}[]" value="{{ k }}"{{ v in field.value ? 'checked="checked"' : '' }} /> {{ v }}<br />
+			{% endfor %}
+		</div>
+
+	{% else %}
+        Form element '{{ field.type }}' is not yet handled or does not exist.<br />
+
+	{% endif %}
+
+{% endmacro %}
+
+{% macro end() %}
+    {{ form_close() }}
+{% endmacro %}

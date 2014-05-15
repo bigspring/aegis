@@ -7,7 +7,6 @@ class Account extends Upload_Controller {
         parent::__construct();
         
         $this->load->library(array('form_validation', 'Ag_auth'));
-        $this->load->spark('messages/1.0.3');
         $this->load->helper(array('url', 'email', 'ag_auth'));
         
         $this->model_name = 'user';

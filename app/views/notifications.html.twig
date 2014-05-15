@@ -1,0 +1,8 @@
+{% for status, messages in fetch_notifications() %}
+	{% for message in messages %}
+		<div class="alert alert-{{ status == 'error' ? 'danger' : status }}">
+			<button type="button" class="close" data-dismiss="alert">×</button>
+			{{ message }}
+		</div>
+	{% endfor %}
+{% endfor %}

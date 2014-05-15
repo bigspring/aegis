@@ -52,8 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'datamapper');
-
+$autoload['libraries'] = array('session', 'database', 'datamapper');
 
 /*
 | -------------------------------------------------------------------
@@ -64,7 +63,7 @@ $autoload['libraries'] = array('database', 'datamapper');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('debug');
+$autoload['helper'] = array('template', 'html', 'debug', 'url', 'date', 'form');
 
 
 /*
@@ -111,6 +110,17 @@ $autoload['language'] = array();
 
 $autoload['model'] = array();
 
+/*
+| -------------------------------------------------------------------
+|  Auto-load Sparks
+| -------------------------------------------------------------------
+| Prototype:
+|
+|	$autoload['sparks'] = array('package/1.0.0');
+|
+*/
+
+$autoload['sparks'] = array('messages/1.0.3', 'twiggy/0.8.5');
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */

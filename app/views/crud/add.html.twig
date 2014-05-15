@@ -1,0 +1,20 @@
+{% extends 'crud.html.twig' %}
+
+{% block content %}
+
+    <!-- main column -->
+    <div class="col-sm-8">
+        <div class="panel panel-default">
+
+            {% include 'crud/title.html.twig' %}
+
+            <!-- panel body -->
+            <div class="panel-body">
+                {#<?php $this->load->view('user/users/form', array('main' => $main, 'groups' => $groups)); ?>#}
+                {%  include 'crud/form.html.twig' %}
+            </div>
+
+        </div><!-- /.panel -->
+    </div><!-- /.col-sm-8 -->
+
+{% endblock %}

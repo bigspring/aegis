@@ -1,0 +1,15 @@
+						<!-- sidebar panel -->
+						{#@JT: the sidebar all CRUD views (excluding lightboxes) always have this structure. it will have a icon+title, short description and action link. action link will either be ADD (on browse & view single item) or SAVE / CANCEL on edit view#}
+						<div class="col-sm-4">
+
+							<div class="panel panel-default action-tile">
+								<div class="panel-heading">
+									<h3><i class="fa {{ meta_data.icon }}"></i> {{ _entity|capitalize }}</h3>
+									<p class="text-muted">{{ meta_data.description }}</p>
+								</div>
+								<div class="panel-body">
+									<a href="{{ crud_url }}add" class="btn btn-success btn-block">Create New {{ _entity|title }}</a>
+								</div>
+							</div>
+
+						</div>

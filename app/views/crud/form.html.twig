@@ -1,0 +1,15 @@
+    {% import 'form_macros.html.twig' as forms %}
+
+    {{ forms.start(form.class) }}
+
+        {% for key, field in form.fields %}
+
+            {{ forms.attribute_handler(key, field) }}
+
+        {% endfor %}
+
+        <hr />
+
+		<button class="btn btn-success" value="Save" type="submit" name="submit">{{ get_submit_text(_entity) }}</button> <a href="{{ crud_url }}" class="btn btn-default">Cancel</a>
+
+    {{  forms.end() }}

@@ -28,7 +28,7 @@ function render_scripts($scripts)
 
 function render_styles($styles)
 {
-    $html = array();
+	$html = array();
 
     if(!$styles)
         return false;

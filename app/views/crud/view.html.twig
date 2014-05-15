@@ -1,0 +1,66 @@
+{% extends 'crud.html.twig' %}
+
+{% block content %}
+
+	<!-- main column -->
+	<div class="col-sm-8">
+		<div class="panel panel-default">
+			
+			{% include 'crud/title.html.twig' %}
+
+			<section class="panel-buttons">
+				<a href="{{ crud_url }}edit/{{ item_id }}" class="btn btn-default"><i class="fa fa-edit"></i></a>
+				<a href="{{ crud_url }}delete/{{ item_id }}" class="btn btn-danger" data-toggle="modal" data-target=".delete-modal"><i class="fa fa-trash-o"></i></a>
+			</section>			
+
+			<!-- panel body -->
+			<div class="panel-body">
+
+				{% for label, attribute in form.fields %}
+
+					<div class="row item-row">
+						<div class="col-sm-4 col-md-3">
+							<strong>{{ attribute.label }}</strong>
+						</div>
+						<div class="col-sm-8 col-md-9">
+
+							{% if is_array(attribute.value) %}
+								{% for value in attribute.value %}
+									{{ value }}<br/>
+								{% endfor %}
+							{% else %}
+								{{ attribute.value }}
+							{% endif %}
+
+						</div>
+						
+					</div>
+
+				{% endfor %}
+
+				{% if is_array(files) %}
+
+					<div class="row item-row">
+						<div class="col-sm-4 col-md-3">
+							<strong>Files</strong>
+						</div>
+						<div class="col-sm-8 col-md-9">
+
+							{% for file in files %}
+								<a href="{{ file.url }}"><img src="{{ file.thumbnail_urls[1] }}" title="Click to view" /></a><br /><br />
+							{% endfor %}
+
+						</div>
+
+					</div>
+
+				{% endif %}
+
+			</div>
+
+		</div><!-- /.panel -->
+	</div><!-- /.col-sm-8 -->
+
+	{% include 'crud/delete-modal.html.twig' %}
+
+{% endblock %}
