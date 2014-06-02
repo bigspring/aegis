@@ -19,7 +19,7 @@
  * @author		Phil DeJarnett
  * @link		http://www.overzealous.com
  */
-class Example extends DataMapper {
+class Example extends DataMapperExt {
 
     // Uncomment and edit these two if the class has a model name that
     //   doesn't convert properly using the inflector_helper.
